@@ -2,20 +2,39 @@ version: 2
  
 sources:
   - name: coffee_shop
-    description: cleaned up data from orders table 
     project: analytics-engineers-club
+    description: database of coffee shop data
     tables:
       - name: customers
-        columns:
+        description: table with customer information
+        columns: 
           - name: id
             tests:
               - unique
               - not_null
- 
+      
       - name: orders
-        description: cleaned up date from orders table
-        columns:
+        description: table with order information
+        columns: 
           - name: id
-            tests:
+            tests: 
               - unique
               - not_null
+
+      - name: order_items
+        description: table with order product id's
+        columns: 
+          - name: id
+
+      - name: product_prices
+        description: table with product prices
+        columns: 
+          - name: id
+            tests: 
+              - unique
+              - not_null
+
+      - name: products
+        description: table with all products
+        columns: 
+          - name: id
