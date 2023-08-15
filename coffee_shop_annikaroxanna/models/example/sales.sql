@@ -2,7 +2,7 @@
 
 SELECT
   orders.id,
-  orders.sold_at,
+  orders.created_at,
   orders.total,
   products.name,
   products.category,
@@ -22,7 +22,7 @@ LEFT JOIN
 ON
   order_items.product_id = products.id
 LEFT JOIN
-  {{ source('coffee_shop', 'products_prices') }} AS product_prices
+  {{ source('coffee_shop', 'product_prices') }} AS product_prices
 ON
   products.id = product_prices.product_id
   AND orders.created_at >= product_prices.created_at

@@ -5,6 +5,9 @@ sources:
     project: analytics-engineers-club
     description: database of coffee shop data
     tables:
+      - name: product_prices
+      - name: products
+      - name: order_items
       - name: customers
         description: table with customer information
         columns: 
@@ -20,21 +23,3 @@ sources:
             tests: 
               - unique
               - not_null
-
-      - name: order_items
-        description: table with order product id's
-        columns: 
-          - name: id
-
-      - name: product_prices
-        description: table with product prices
-        columns: 
-          - name: id
-            tests: 
-              - unique
-              - not_null
-
-      - name: products
-        description: table with all products
-        columns: 
-          - name: id
