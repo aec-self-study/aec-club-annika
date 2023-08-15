@@ -5,9 +5,16 @@ sources:
     project: analytics-engineers-club
     description: database of coffee shop data
     tables:
-      - name: product_prices
       - name: products
       - name: order_items
+
+      - name: product_prices
+        description: price of product
+        columns: 
+          - name: price
+            tests:
+              - greater_than_null
+
       - name: customers
         description: table with customer information
         columns: 
