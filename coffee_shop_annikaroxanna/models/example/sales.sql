@@ -2,7 +2,7 @@
 
 SELECT
   orders.id,
-  orders.sold_at,
+  orders.created_at,
   orders.total,
   products.name,
   products.category,
